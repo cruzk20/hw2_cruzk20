@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="89dp">
+
+    <com.example.kelsicruz.homework2.Face
+        android:id="@+id/faceView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/hairSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="511dp"
+        android:entries="@id/redSeekBar"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginStart="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hairSpinner">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioGroup
+                android:id="@+id/hairStyleButtons"
+                android:layout_width="220dp"
+                android:layout_height="110dp"
+                android:checked="false"
+                android:text="Hair Style"
+                tools:layout_editor_absoluteX="532dp"
+                tools:layout_editor_absoluteY="710dp">
+
+                <RadioButton
+                    android:id="@+id/eyeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hair" />
+
+                <RadioButton
+                    android:id="@+id/skinButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eyes" />
+
+                <RadioButton
+                    android:id="@+id/hairButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skin" />
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/blueText"
+                android:layout_width="102dp"
+                android:layout_height="45dp"
+                android:text="Blue"
+                android:textSize="30dp"
+                tools:layout_editor_absoluteX="60dp"
+                tools:layout_editor_absoluteY="905dp" />
+
+            <TextView
+                android:id="@+id/redText"
+                android:layout_width="116dp"
+                android:layout_height="42dp"
+                android:text="Red"
+                android:textSize="30dp"
+                tools:layout_editor_absoluteX="50dp"
+                tools:layout_editor_absoluteY="575dp" />
+
+            <TextView
+                android:id="@+id/greenText"
+                android:layout_width="116dp"
+                android:layout_height="44dp"
+                android:text="Green"
+                android:textSize="30dp"
+                tools:layout_editor_absoluteX="50dp"
+                tools:layout_editor_absoluteY="741dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <SeekBar
+                android:id="@+id/blueSeekBar"
+                android:layout_width="316dp"
+                android:layout_height="69dp"
+                tools:layout_editor_absoluteX="55dp"
+                tools:layout_editor_absoluteY="975dp" />
+
+            <SeekBar
+                android:id="@+id/redSeekBar"
+                android:layout_width="315dp"
+                android:layout_height="69dp"
+                tools:layout_editor_absoluteX="50dp"
+                tools:layout_editor_absoluteY="617dp" />
+
+            <SeekBar
+                android:id="@+id/greenSeekBar"
+                android:layout_width="312dp"
+                android:layout_height="69dp"
+                tools:layout_editor_absoluteX="55dp"
+                tools:layout_editor_absoluteY="820dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/randomFaceButton"
+                android:layout_width="212dp"
+                android:layout_height="69dp"
+                android:text="Random Face"
+                tools:layout_editor_absoluteX="536dp"
+                tools:layout_editor_absoluteY="906dp" />
+        </TableRow>
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>
